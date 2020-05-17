@@ -21,7 +21,7 @@ steps:
   - task: Docker@2
     displayName: "Build & Push Docker Image"
     inputs:
-      containerRegistry: 'njccommonacr2'
+      containerRegistry: 'manualserviceconnection'
       repository: 'njc-repo'
       command: 'buildAndPush'
       Dockerfile: 'Dockerfile'
