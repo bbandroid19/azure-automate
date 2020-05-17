@@ -17,14 +17,12 @@ steps:
       javaHomeOption: "JDKVersion"
       jdkVersionOption: "1.8"
       jdkArchitectureOption: "x64"
-      publishJUnitResults: true
-      testResultsFiles: "**/surefire-reports/TEST-*.xml"
       goals: "package"
-  - task: Docker@1
+  - task: Docker@2
     displayName: "Build & Push Docker Image"
     inputs:
-      containerRegistryType: "Azure Container Registry"
-      azureContainerRegistry: "njccontainerregistry.azurecr.io"
-      imageName: "njccontainerregistry.azurecr.io/njc-automate"
-      command: "Push an image"
-      includeSourceTags: true
+      containerRegistry: "njccommonacr"
+      repository: 'njc-repo'
+      command: 'buildAndPush'
+      DockerFile: 'DockerFile'
+      tags: '$(Build.BuildNumber)'
