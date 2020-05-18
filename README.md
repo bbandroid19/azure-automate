@@ -1,9 +1,9 @@
 ---
 page_type: sample
 languages:
-- java
+  - java editing
 products:
-- azure
+  - azure
 description: "This is a sample application to showcase the use of Spring Cloud Function on top of Azure Functions."
 urlFragment: hello-spring-function-azure
 ---
@@ -14,14 +14,14 @@ This is a sample application to showcase the use of Spring Cloud Function on top
 
 ## Build tool
 
-This branch uses __Maven__ to build the application, please use the `gradle` branch to use __Gradle__ instead:
+This branch uses **Maven** to build the application, please use the `gradle` branch to use **Gradle** instead:
 
 [Switch to the `gradle` branch](../../tree/gradle/)
 
-This branch uses __Maven__ to build the application:
- 
+This branch uses **Maven** to build the application:
+
 - It uses the Azure Functions Plugin for Maven, documented at [https://github.com/microsoft/azure-maven-plugins/tree/develop/azure-functions-maven-plugin](https://github.com/microsoft/azure-maven-plugins/tree/develop/azure-functions-maven-plugin)
-- If you want to use __Gradle__ instead, please : [Switch to the `gradle` branch](../../tree/gradle/)
+- If you want to use **Gradle** instead, please : [Switch to the `gradle` branch](../../tree/gradle/)
 
 ## Features
 
