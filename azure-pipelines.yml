@@ -6,6 +6,9 @@
 trigger:
   - master
 
+variables:
+  - group: build.variables
+
 pool:
   vmImage: "ubuntu-latest"
 
@@ -21,8 +24,8 @@ steps:
   - task: Docker@2
     displayName: "Build & Push Docker Image"
     inputs:
-      containerRegistry: 'manualserviceconnection'
-      repository: 'njc-repo'
+      containerRegistry: '$(dockerRegistryServiceConnection)'
+      repository: '$(imageRepository)'
       command: 'buildAndPush'
       Dockerfile: 'Dockerfile'
       tags: '$(Build.BuildNumber)'
