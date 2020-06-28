@@ -28,4 +28,4 @@ steps:
       repository: '$(imageRepository)'
       command: 'buildAndPush'
       Dockerfile: 'Dockerfile'
-      tags: 'azure-image'
+      tags: 'latest'
